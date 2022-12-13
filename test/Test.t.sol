@@ -69,10 +69,14 @@ contract CounterTest is Test {
         WalletProxy(payable(proxy))._updateImplementation(address(wallet2));
 
         /// @dev check functions and state of clone
+        assert(Wallet1(proxy).a() == 19);
+        assert(Wallet1(proxy).b() == 11);
         assert(Wallet2(proxy).c() == 0);
+        Wallet1(proxy).setA(64);
+        Wallet1(proxy).setB(15);
         Wallet2(proxy).setC(99);
-        assert(Wallet2(proxy).a() == 19);
-        assert(Wallet2(proxy).b() == 11);
+        assert(Wallet2(proxy).a() == 64);
+        assert(Wallet2(proxy).b() == 15);
         assert(Wallet2(proxy).c() == 99);
     }
 }
