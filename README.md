@@ -11,7 +11,7 @@
 [license]: https://opensource.org/licenses/MIT
 [license-badge]: https://img.shields.io/badge/License-MIT-blue.svg
 
-Proof of concept for an upgradable minimal proxy
+Proof of concept for an *upgradable* [minimal proxy](https://eips.ethereum.org/EIPS/eip-1167)
 
 ## Contracts
 
